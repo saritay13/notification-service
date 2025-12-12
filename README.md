@@ -28,4 +28,14 @@ with docker(Confluent Kafka)
 4. create producer api and corresponding services to produce and consume messages with simple setup
 5. curl -X POST http://localhost:8080/api/messages -H "Content-Type: text/plain" -d "Hello There"
 
+#### Main concepts:
+group-id: demo-group : 
+Consumer group = logical name for a group of consumers that share the work of reading a topic.
+All consumers with same group.id: Coordinate through Kafka. 
+Only one of them will read a given partition.
+Offsets (what message you read last) are stored per group.
+So:
+Same group-id → load balancing + at-least-once semantics.
+Different group-ids → each group gets its own copy of the messages.
+
 
