@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="kafkConfiguration" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.notification.task.TaskApplication" />
+    <module name="notification-service" />
+    <method v="2">
+      <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_start kafka" />
+    </method>
+  </configuration>
+</component>
